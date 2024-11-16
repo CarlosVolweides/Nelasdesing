@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html lang="es">
+    <head>
+        <title>Nelas Design</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,
+         user-scalable=no, initial-scale=1, maximum-scale=1, minimun-scale=1">
+         <link rel="stylesheet" href="style.css">
+
+         <link rel="stylesheet" 
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+         crossorigin="anonymous" 
+         referrerpolicy="no-referrer" />
+
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav-left">
+                    <img src="logo.png" class="logo">
+                    <div class="menu">
+                    <ul>
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="">Categorias</a>
+                        <ul>
+                            <li><a href="">Pantalones</a></li>
+                            <li><a href="">Tops</a></li>
+                            <li><a href="">Franelas</a></li>
+                            <li><a href="">Vestidos</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                    <i class="fa-solid fa-bars" id="bars"></i>
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Buscar por modelo, categoria y mas">
+                    </div>
+                </div>
+                </div>
+                <div class="nav-right">
+                    <div>
+                        <i class="fa-solid fa-circle-user"></i>
+                        <p><a href="">perfil</a></p>
+                    </div>
+                    <div id="fav">
+                        <i class="fa-regular fa-heart"></i>
+                        <p><a href="favoritos.html" id>favoritos</a></p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <p><a href="">carrito</a></p>
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="bod">
+                <div class="carrito">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <h1 align="center">Tu bolsa esta vacia</h1>
+                    <p>Ingresa para ver tu cesta y comenzar a comprar</p>
+                    <button class="btn" type="button"><a href="perfil.html">Iniciar sesion</a></button>
+                </div>
+            </div>
+        </main>
+        <script>
+            const list = document.querySelectorAll('.list');
+            function activeLink(){
+                list.forEach((item) => 
+                item.classList.remove('active'));
+                this.classList.add('active');
+            }
+            list.forEach((item) => 
+            item.addEventListener('click', activeLink));
+        </script>
+         <footer>
+            <div class="nav-phone">
+                <ul>
+                    <li class="list">
+                        <a href="nelas.html">
+                            <span class="icon">
+                                <i class="fa-solid fa-house"></i>
+                            </span>
+                            <span class="text">inicio</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="categorias.html">
+                            <span class="icon">
+                                <i class="fa-solid fa-list"></i>
+                            </span>
+                            <span class="text">categorias</span>
+                        </a>
+                    </li>
+                    <li class="list active">
+                        <a href="" >
+                        <span class="icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            </span>
+                            <span class="text">carrito
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="perfil.html">
+                            <span class="icon">
+                                <i class="fa-solid fa-circle-user"></i>
+                            </span>
+                            <span class ="text">yo</span>
+                        </a>
+                    </li>
+                    <div class="indicator"></div>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
